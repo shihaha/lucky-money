@@ -1,0 +1,10 @@
+.name {
+    color: blue;
+    font-size: 36px;
+}
+
+.background-img {
+    width: 100px;
+    height: 100px;
+    background: url(../img/a.png);
+}

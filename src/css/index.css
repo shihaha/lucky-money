@@ -1,0 +1,67 @@
+body {
+    padding: .5rem .3rem 1rem .3rem;
+}
+
+.app {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: .3rem;
+}
+
+.main .title {
+    border-bottom: 1px solid #333;
+}
+
+.intro-and-service {
+    font-size: .2rem;
+    text-align: center;
+    margin-top: .1rem;
+}
+
+.footer {
+    width: 100%;
+    height: 1rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.title-item {
+    height: 1rem;
+    border-bottom: 1px solid black;
+    font-size: .5rem;
+}
+
+.main .item {
+    width: 100%;
+    height: .3rem;
+    font-size: .2rem;
+}
+
+.main .item .label {
+    font-size: .1rem;
+}
+.main .item .content {
+	float: right;
+}
+
+.main .item .content .degree {
+    width: .2rem;
+    height: .1rem;
+    border: 1px solid black;
+    font-size: .1rem;
+}
+.main .item .content input{
+	border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+    ! function(e, t) {
+        function i() {
+            var t = o.getBoundingClientRect().width;
+            t / a > 1920 && (t = 1920 * a);
+            var i = t / 10;
+            o.style.fontSize = i + "px", d.rem = e.rem = i
+        }
+        var n, r = e.document,
+            o = r.documentElement,
+            a = (r.querySelector('meta[name="viewport"]'), r.querySelector('meta[name="flexible"]'), 0),
+            d = t.flexible || (t.flexible = {});
+        if (!a) {
+            var l = (e.navigator.appVersion.match(/android/gi), e.navigator.appVersion.match(/iphone/gi)),
+                m = e.devicePixelRatio;
+            a = l ? m >= 3 && (!a || a >= 3) ? 3 : m >= 2 && (!a || a >= 2) ? 2 : 1 : 1
+        }
+        o.setAttribute("data-dpr", a), e.addEventListener("resize", function() { clearTimeout(n), n = setTimeout(i, 300) }, !1), e.addEventListener("pageshow", function(e) { e.persisted && (clearTimeout(n), n = setTimeout(i, 300)) }, !1), i(), d.dpr = e.dpr = a, d.refreshRem = i
+    }(window, window.lib || (window.lib = {}));
+    </script>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="main">
+            <div class="title item" @click="showTitles"></div>
+            <div class="item">
+                <span class="label">设置难度</span>
+                <div class="content"><span class="degree">简单</span><span class="degree">正常</span><span class="degree">困难</span><span class="degree">变态</span></div>
+            </div>
+            <div class="item">
+                <span class="label">赏金（元）</span>
+                <div class="content"><span class="degree">2</span><span class="degree">10</span><span class="degree">50</span><span class="degree">100</span></div>
+            </div>
+            <div class="item">
+                <span class="label">数量（个）</span>
+                <div class="content"><input type="text"></div>
+            </div>
+        </div>
+        <div class="intro-and-service">玩法介绍 | 联系客服</div>
+        <div class="footer"></div>
+        <!-- titles弹窗开始 -->
+        <dialog-box v-show="showDialog=='titles'">
+            <div slot="body">
+                <ul class="title-box">
+                    <li class="title-item">shi</li>
+                    <li class="title-item">shi</li>
+                    <li class="title-item">shi</li>
+                </ul>
+            </div>
+        </dialog-box>
+    </div>
+</body>
+
+</html>
